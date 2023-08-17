@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elian Villa | Portafolio</title>
+    <link rel="icon" href="#" /> <!-- colocar icono -->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles/mystyles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- pre-load de imagenes -->
+    <!-- has un pre-load de las imagenes mas pesadas -->
+    <link rel="preload" href="./img/autorenting.jpg" as="image">
+    <link rel="preload" href="./img/brigada.jpg" as="image">
+    <link rel="preload" href="./img/itquentame.jpeg" as="image">
+</head>
+
+<body class="wellcome w--opacity">
+
+    <!-- barra de anvegación -->
+    <nav class="w-100 position-fixed">
+        <div class="contenedor__principal nav white-color d-flex justify-content-between px-4 py-3 m-auto">
+            <div class="nav__name">
+                <span class="fs-6 fw-bold text-white">Elian <span class="text-warning">Villa</span></span>
+            </div>
+
+            <div class="nav_icon">
+                <i class="nav_enlace_icon fs-4 d-lg-none fa-solid fa-bars text-white"></i>
+            </div>
+
+            <div class="nav__enlaces d-flex flex-column flex-lg-row text-light">
+                <a class="nav__enlace text-light text-decoration-none me-md-5" href="#inicio">Inicio</a>
+                <a class="nav__enlace text-light text-decoration-none me-md-5" href="#acercade">Acerca de mi</a>
+                <a class="nav__enlace text-light text-decoration-none me-md-5" href="#habilidades">Habilidades</a>
+                <a class="nav__enlace text-light text-decoration-none me-md-5" href="#experiencia">Experiencia</a>
+                <a class="nav__enlace text-light text-decoration-none" href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- vista principal (inicio) -->
+    <section id="inicio" class="section container-fluid bg-dark d-block">
+        <div class="section__flex d-flex flex-column justify-content-center align-items-center">
+            <span class="text-white d-block text-center fw-bold fs-5">Hola, <span
+                    class="text-warning fw-normal">Soy</span></span>
+            <span class="text-warning d-block text-center fw-bold fs-1">Elian Villa</span>
+            <span class="text-white d-block text-center fw-bold fs-5">Desarrollador de software</span>
+            <span class="text-white d-block text-center fw-bold fs-5">&lt;/&gt;</span>
+
+            <div class="section__links pt-4 w-100 d-flex justify-content-center">
+                <a class="me-3 text-decoration-none text-white fs-1" href="https://github.com/ElianVilla" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github icon_social"></i>
+                </a>
+                <a class="text-decoration-none text-white fs-1" href="https://www.linkedin.com/in/elian-villa/" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin icon_social"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- acerca de -->
+    <section class="acercade container-fluid" id="acercade">
+        <div class="contenedor__principal m-auto  text-white px-3">
+
+            <div class="row">
+                <div class="col-lg">
+                    <h2 class="text-center text-lg-start fw-bold my-5">Acerca de mi</h2>
+
+                    <p class="text-center text-lg-start">
+                        Soy un apasionado de la tecnología y la programación, con una actitud proactiva y entusiasta. 
+                        Mi constante búsqueda de nuevas habilidades impulsa mi crecimiento y
+                        me inspira a alcanzar resultados excepcionales en cada desafío.
+                    </p>
+                    <p class="text-center text-lg-start">
+                        Mi adaptabilidad me permite abrazar rápidamente nuevas tecnologías y enfoques. 
+                        Mantengo una mentalidad abierta para explorar tendencias actuales y valioso aprendizaje continuo.
+                    </p>
+                    <p class="text-center text-lg-start">
+                        Busco un entorno dinámico que fomente mi crecimiento profesional. 
+                        Mi versatilidad en el desarrollo tanto front-end como back-end me capacita para contribuir de forma integral. 
+                        Encaro desafíos con determinación y agrego un valor significativo a cualquier equipo del que forme parte.
+                    </p>
+                    <a id="asd" class="contacto btn btn-warning d-block m-auto my-lg-5 mx-lg-0"
+                        href="#contacto">Contactame</a>
+
+                </div>
+                <div class="col-lg">
+                    <img class="img__perfil me d-block w-75 m-auto rounded-circle py-5" src="img/imagen_perfil.jpg" alt="imagen de perfil">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- habilidades -->
+    <section id="habilidades" class="habilidades container-fluid">
+        <div class="contenedor__principal m-auto text-white px-3">
+            <div class="row">
+                <div class="d-lg-flex justify-content-lg-center align-items-lg-center">
+                    <div class="col-lg">
+                        <h2 class="text-center text-lg-start fw-bold my-5">Habilidades</h2>
+
+                        <p class="text-center text-lg-start">
+                            Durante mi etapa universitaria, he trabajado con una variedad de tecnologías, 
+                            incluyendo Java y Python para el desarrollo de lógica de programación y resolución de problemas. 
+                            Además, he obtenido experiencia en diseño y maquetado de sitios web mediante HTML y CSS, 
+                            creando interfaces atractivas. Asimismo, he explorado JavaScript para agregar interacciones dinámicas y 
+                            funcionales a mis proyectos. Estoy emocionado por aplicar estas habilidades en nuevos desafíos y proyectos, 
+                            mientras continúo expandiendo mi conocimiento en el campo de la tecnología.
+                        </p>
+
+                        <a class="proyectos btn btn-warning d-block m-auto my-lg-5 mx-lg-0"
+                            href="#experiencia">Proyectos</a>
+                    </div>
+                    <div class="col-lg my-5">
+                        <div class="d-flex justify-content-center px-4">
+                            <ul class="me-5">
+                                <li>Java</li>
+                                <li>Python</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+
+                            <ul>
+                                <li>JavaScript</li>
+                                <li>MySQL</li>
+                                <li>Git</li>
+                                <li>Visual Studio Code</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- experiencia -->
+    <section id="experiencia" class="experiencia container-fluid mb-5">
+        <div class="contenedor__principal m-auto text-white px-3">
+
+            <div class="row">
+                <div class="col">
+                    <h2 class=" text-center fw-bold my-5">Experiencia</h2>
+                </div>
+            </div>
+
+            <div class="row row-cols-md-2 row-cols-xl-3">
+                <div class="col-md p-2">
+                    <article class="article__experiencia">
+                        <div class="imagen_referencia">
+                            <img class="w-100 rounded-2" src="img/generador_contraseñas.webp" alt="Generador de contraseña">
+                        </div>
+
+                        <div class="spinner">
+                            <div class="double-bounce1"></div>
+                            <div class="double-bounce2"></div>
+                        </div>
+
+                        <span class="m-0 fw-bold">Generador de contraseña</span>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#brigada"
+                            class="btn btn-warning">Ver más</button>
+                    </article>
+                </div>
+
+                
+                <!-- <div class="col-md p-2">
+                    <article class="article__experiencia">
+                        <div class="imagen_referencia">
+                            <img class="w-100 rounded-2" src="img/autorenting.jpg" alt="experiencia auto renting hca">
+                        </div>
+
+                        <div class="spinner">
+                            <div class="double-bounce1"></div>
+                            <div class="double-bounce2"></div>
+                        </div>
+
+                        <span class="m-0 fw-bold">Lorem ipsum dolor sit amet.</span>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#autorenting"
+                            class="btn btn-warning">Ver más</button>
+                    </article>
+                </div> -->
+
+                <!-- EN CASO DE QUERE AGREGAR OTRA EXPERIENCIA -->
+                <!-- <div class="col-md p-2">
+                    <article class="article__experiencia">
+                        <div class="imagen_referencia">
+                            <img class="w-100 rounded-2" src="#" alt="texto alternativo">
+                        </div>
+
+                        <div class="spinner">
+                            <div class="double-bounce1"></div>
+                            <div class="double-bounce2"></div>
+                        </div>
+
+                        <span class="m-0 fw-bold">Lorem ipsum dolor sit amet.</span>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#idexperiencia"
+                            class="btn btn-warning">Ver más</button>
+                    </article>
+                </div> -->
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- svg waves -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#1f1f1f" fill-opacity="1"
+            d="M0,96L120,122.7C240,149,480,203,720,218.7C960,235,1200,213,1320,202.7L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
+        </path>
+    </svg>
+
+
+    <!-- footer -->
+    <footer class="text-white footer container-fluid" id="contacto">
+        <div class="contenedor__principal m-auto px-3">
+            <div class="row">
+                <div class="d-flex flex-column flex-md-row justify-content-sm-between align-items-sm-center">
+                    <div class="footer__name pb-5">
+                        <span class="d-block fs-4 fw-bold text-center text-md-start">Elian <span
+                                class="text-warning">Villa</span></span>
+                        <span class="text-white d-block text-center text-md-start fs-6">Desarrollador de software</span>
+                    </div>
+
+                    <div class="pb-5">
+                        <span class="d-block text-center text-md-start">
+                            <i class="fa-solid fa-phone me-2"></i>
+                            +57 3196576824</span>
+                        <span class="d-block text-center text-md-start">
+                            <i class="fa-solid fa-envelope me-2"></i>
+                            villaelian6@gmail.com</span>
+                    </div>
+
+                    <div class="text-center pb-5">
+                        <a class="me-3 text-decoration-none text-white" href="https://github.com/ElianVilla" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fa-brands fa-github fs-3"></i>
+                        </a>
+                        <a class="me-3 text-decoration-none text-white" href="https://www.linkedin.com/in/elian-villa/" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fa-brands fa-linkedin fs-3"></i>
+                        </a>
+                        <a class="text-decoration-none text-white" href="https://drive.google.com/file/d/1nkNrWKjIWNA0KPoTcTo7BQuU95QGs6S4/view?usp=sharing" target="_blank"
+                            rel="noopener noreferrer" download>
+                            <i class="fa-solid fa-sheet-plastic fs-3"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+    </footer>
+
+    <!-- Generador de contraseñas-->
+    <div class="modal fade" id="brigada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content modal__content--border">
+                <div class="modal-header modal__header--bg text-white">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Generador de contraseña</h1>
+                </div>
+                <div class="modal-body modal__body--bg">
+                    <h6 class="d-block fw-bold">Funcionalidad:</h6>
+                    <br>
+
+                    <p>
+                        El <strong>Generador de Contraseñas Aleatorias</strong>  es una herramienta en línea que te brinda la capacidad de generar contraseñas sólidas y exclusivas de manera rápida y sin complicaciones. 
+                        Diseñado con un enfoque en la seguridad, esta herramienta está pensada para reforzar la protección de tus cuentas en línea al producir contraseñas personalizadas según tus propias preferencias.
+                    </p>
+
+                    <div class="d-flex flex-column flex-lg-row justify-content-center gap-3 align-items-center">
+                        <div class="w-100 text-center">
+                            <img src="./img/Contraseñas.png" alt="Contraseña" class="custom-image">
+                            <a class="btn btn-warning mt-3" href="https://elianvilla.github.io/Password-generator/" target="_blank" rel='noopener noreferrer'>
+                                Visitar
+                            </a>
+                        </div>
+                    </div>
+                    
+                    
+                    <span class="d-block fw-bold">Tareas realizadas:</span>
+                    <ul>
+                        <li>Personalización de Longitud: Te permite elegir la longitud exacta de tus contraseñas, ajustándolas de   acuerdo a los requisitos de seguridad específicos de cada plataforma.
+                        </li>
+                        <li>
+                            Selección de Caracteres: Ofrece la opción de incluir diferentes tipos de caracteres en tus contraseñas, tales como letras mayúsculas, minúsculas, números y símbolos especiales. Esto aumenta la complejidad y fortaleza de las contraseñas generadas.
+                        </li>
+                        <li>
+                            Vista Previa Segura: Antes de decidir, te permite ver una vista previa de la contraseña generada para asegurarte de que cumple con tus requisitos y preferencias.
+                        </li>
+                        <li>
+                            Ahorro de Tiempo: Elimina la necesidad de pensar en contraseñas complejas, permitiéndote obtener contraseñas seguras en cuestión de segundos.
+                        </li>
+                    </ul>
+
+                    <br>
+                    <span class="d-block fw-bold">Tecnologías utilizadas:</span>
+                    <ul>
+                        <li>Html</li>
+                        <li>Css</li>
+                        <li>JavaScript</li>
+                    </ul>
+
+                    <br>
+
+                </div>
+                <div class="modal-footer modal__footer--bg">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Otra experiencia-->
+    <!--<div class="modal fade" id="autorenting" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content modal__content--border">
+                <div class="modal-header modal__header--bg text-white">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Lorem ipsum dolor sit amet.</h1>
+                </div>
+                <div class="modal-body modal__body--bg">
+                    <h6 class="d-block fw-bold">Funcionalidad:</h6>
+                    <br>
+
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nostrum tempore quas
+                        voluptas illo nulla laborum modi, corrupti dolorem. Nihil deserunt alias nisi officia amet
+                        tenetur vel, odio obcaecati rerum!
+                    </p>
+
+                    <div class="custom__carousel rounded-4">
+                        <div id="carouselExampleFade" class="carousel slide carousel-fade w-100 h-100">
+                            <div class="carousel-inner h-100">
+                                <div class="carousel-item active h-100">
+                                    <img src="./img/ar1.jpeg" class="d-block h-100 m-auto" alt="interfaz de log in">
+                                </div>
+                                <div class="carousel-item h-100">
+                                    <img src="./img/ar2.jpeg" class="d-block h-100 m-auto " alt="interfaz de registro">
+                                </div>
+                                <div class="carousel-item h-100">
+                                    <img src="./img/ar3.jpeg" class="d-block h-100 m-auto" alt="interfaz de inicio">
+                                </div>
+                                <div class="carousel-item h-100">
+                                    <img src="./img/ar4.jpeg" class="d-block h-100 m-auto" alt="barra de anvegación">
+                                </div>
+                                <div class="carousel-item h-100">
+                                    <img src="./img/ar5.jpeg" class="d-block h-100 m-auto"
+                                        alt="interfaz de selección dde vehiculo">
+                                </div>
+                                <div class="carousel-item h-100">
+                                    <img src="./img/ar6.jpeg" class="d-block h-100 m-auto"
+                                        alt="interfaz de alquiler de vehiculo">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <a class="btn btn-warning my-3" href="#" target="_blank" rel='noopener noreferrer'>
+                        Visitar repositorio
+                    </a>
+
+                    <br>
+                    <span class="d-block fw-bold">Tecnologías utilizadas:</span>
+                    <ul>
+                        <li>Tecnología</li>
+                        <li>Tecnología</li>
+                        <li>Tecnología</li>
+                        <li>Tecnología</li>
+                        <li>Tecnología</li>
+                        <li>Tecnología</li>
+                    </ul>
+
+                    <br>
+                    <span class="d-block fw-bold">Tareas realizadas:</span>
+                    <br>
+                    <ul>
+                        <li>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        </li>
+                        <li>
+                            Lorem ipsum dolor, sit amet consectetur.
+                        </li>
+                        <li>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        </li>
+                        <li>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        </li>
+                        <li>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        </li>
+                        <li>
+                            Lorem ipsum dolor, sit amet.
+                        </li>
+                        <li>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing.
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer modal__footer--bg">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- EN CASO DE QUERE AGREGAR OTRA EXPERIENCIA -->
+    <!-- <div class="modal fade" id="idexperiencia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content modal__content--border">
+                <div class="modal-header modal__header--bg text-white">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Lorem ipsum dolor sit amet.</h1>
+                </div>
+                <div class="modal-body modal__body--bg">
+
+                    <span>CONTENIDO AQUÍ</span>
+
+                </div>
+                <div class="modal-footer modal__footer--bg">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!-- mis scripts -->
+    <script defer src="js/index.js"></script>
+</body>
+
+</html>

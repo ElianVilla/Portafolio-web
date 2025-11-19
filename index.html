@@ -5,39 +5,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elian Villa | Portafolio</title>
-    <link rel="icon" href="img/gaming.png" /> <!-- colocar icono -->
+    <title>Elian Villa | Hacking Etico & Desarrollo de Software</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/gaming.png" />
+
+    <!-- Normalize -->
     <link rel="stylesheet" href="styles/normalize.css" />
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+
+    <!-- Estilos propios -->
     <link rel="stylesheet" href="styles/mystyles.css" />
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- pre-load de imagenes -->
-    <!-- has un pre-load de las imagenes mas pesadas -->
-    <link rel="preload" href="img/imagen_perfil.jpg" as="image">
 </head>
 
-<body class="wellcome w--opacity">
+<body class="wellcome">
 
-    <!-- barra de anvegación -->
+    <!-- barra de navegación -->
     <nav class="w-100 position-fixed">
         <div class="contenedor__principal nav white-color d-flex justify-content-between px-4 py-3 m-auto">
             <div class="nav__name">
-                <span class="fs-6 fw-bold text-white">Elian <span class="text-warning">Villa</span></span>
+                <span class="fs-6 fw-bold text-white">Elian <span class="text-accent">Villa</span></span>
             </div>
 
-            <div class="nav_icon">
-                <i class="nav_enlace_icon fs-4 d-lg-none fa-solid fa-bars text-white"></i>
+            <div class="nav_icon d-lg-none">
+                <i class="nav_enlace_icon fs-4 fa-solid fa-bars text-white"></i>
             </div>
 
             <div class="nav__enlaces d-flex flex-column flex-lg-row text-light">
                 <a class="nav__enlace text-light text-decoration-none me-md-5" href="#inicio">Inicio</a>
-                <a class="nav__enlace text-light text-decoration-none me-md-5" href="#acercade">Acerca de mi</a>
+                <a class="nav__enlace text-light text-decoration-none me-md-5" href="#acercade">Acerca de mí</a>
                 <a class="nav__enlace text-light text-decoration-none me-md-5" href="#habilidades">Habilidades</a>
-                <a class="nav__enlace text-light text-decoration-none me-md-5" href="#experiencia">Experiencia</a>
+                <a class="nav__enlace text-light text-decoration-none me-md-5" href="#experiencia">Proyecto</a>
                 <a class="nav__enlace text-light text-decoration-none" href="#contacto">Contacto</a>
             </div>
         </div>
@@ -45,58 +51,120 @@
 
     <!-- vista principal (inicio) -->
     <section id="inicio" class="section container-fluid bg-dark d-block">
-        <div class="section__flex d-flex flex-column justify-content-center align-items-center">
-            <span class="text-white d-block text-center fw-bold fs-5">Hola, <span
-                    class="text-warning fw-normal">Soy</span></span>
-            <span class="text-warning d-block text-center fw-bold fs-1">Elian Villa</span>
-            <span class="text-white d-block text-center fw-bold fs-5">Ingeniero de Sistemas</span>
-            <span class="text-white d-block text-center fw-bold fs-5"><span
-                class="text-warning fw-normal">Y</span></span>
-            <span class="text-white d-block text-center fw-bold fs-5">Desarrollador de Software</span>
-            <span class="text-white d-block text-center fw-bold fs-5">&lt;/&gt;</span>
+        <div
+            class="section__flex d-flex flex-column justify-content-center align-items-center flex-lg-row contenedor__principal m-auto">
 
-            <div class="section__links pt-2 w-100 d-flex justify-content-center align-items-center">
-                <a class="me-4 text-decoration-none text-white fs-1" href="https://github.com/ElianVilla" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-github icon_social fs-2 text-white"></i>
-                </a>
-                <a class="me-4 text-decoration-none text-white fs-1" href="https://www.linkedin.com/in/elian-villa/" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-linkedin icon_social fs-2 text-white"></i>
-                </a>
-                <a class="text-decoration-none text-white fs-1" href="https://drive.google.com/file/d/1nkNrWKjIWNA0KPoTcTo7BQuU95QGs6S4/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-solid fa-sheet-plastic icon_social fs-2 text-white"></i>
-                </a>
-            </div>            
+            <div
+                class="section__izquierda d-flex flex-column justify-content-center align-items-start text-center text-lg-start text-white mb-5 mb-lg-0 w-100">
+
+                <span class="fs-6 mb-2 text-accent text-uppercase fw-semibold tracking">
+                    Ingeniero de Sistemas
+                </span>
+
+                <span class="fs-1 fw-bold mb-2">Elian Villa</span>
+
+                <span class="hero__title mb-3">
+                    <span class="hero__title--small">Hacking Ético &amp; Desarrollo de Software</span>
+                </span>
+
+                <p class="w-100 w-md-75">
+                    Combino <strong>ciberseguridad</strong> y <strong>desarrollo de software</strong> para analizar,
+                    construir y fortalecer aplicaciones y sistemas. Me interesa especialmente la seguridad ofensiva,
+                    pruebas de penetración y el diseño de soluciones seguras y eficientes.
+                </p>
+
+                <div class="section__links d-flex gap-3 mt-4 flex-wrap">
+                    <!-- GitHub -->
+                    <a href="https://github.com/ElianVilla" target="_blank" rel="noreferrer"
+                        aria-label="GitHub de Elian Villa">
+                        <div class="icon_social">
+                            <i class="fa-brands fa-github text-white fs-4"></i>
+                        </div>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/elian-villa" target="_blank" rel="noreferrer"
+                        aria-label="LinkedIn de Elian Villa">
+                        <div class="icon_social">
+                            <i class="fa-brands fa-linkedin text-white fs-4"></i>
+                        </div>
+                    </a>
+
+                    <!-- YouTube / Glawpy -->
+                    <a href="https://www.youtube.com/@glawpy" target="_blank" rel="noreferrer"
+                        aria-label="Canal de YouTube de Elian Villa">
+                        <div class="icon_social">
+                            <i class="fa-brands fa-youtube text-white fs-4"></i>
+                        </div>
+                    </a>
+
+                    <!-- CV en Google Drive -->
+                    <a href="https://drive.google.com/file/d/1MDTQ2KBqd9IDTUWk9ojGqbHCkymKdX4R/view?usp=sharing"
+                        target="_blank" rel="noreferrer" aria-label="Descargar CV de Elian Villa">
+                        <div class="icon_social">
+                            <i class="fa-solid fa-file-arrow-down text-white fs-4"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- imagen -->
+            <div class="section__derecha d-flex justify-content-center align-items-center">
+                <img class="img__perfil img-fluid" src="img/imagen_perfil.jpg"
+                    alt="Foto de perfil de Elian Villa" />
+            </div>
         </div>
     </section>
 
-    <!-- acerca de -->
-    <section class="acercade container-fluid" id="acercade">
-        <div class="contenedor__principal m-auto  text-white px-3">
-
+    <!-- acerca de mi -->
+    <section id="acercade" class="acercade container-fluid">
+        <div class="contenedor__principal m-auto py-5">
             <div class="row">
-                <div class="col-lg">
-                    <h2 class="text-center text-lg-start fw-bold my-5">Acerca de mi</h2>
-
-                    <p class="text-center text-lg-start">
-                        Soy un apasionado de la tecnología y la programación, con una actitud proactiva y entusiasta. 
-                        Mi constante búsqueda de nuevas habilidades impulsa mi crecimiento y
-                        me inspira a alcanzar resultados excepcionales en cada desafío.
+                <div class="col-12 col-lg-7 mb-4 mb-lg-0">
+                    <h2 class="fw-bold mb-3">Acerca de mí</h2>
+                    <p>
+                        Soy <strong>Ingeniero de Sistemas</strong>, con experiencia en
+                        <strong>ciberseguridad</strong> y <strong>desarrollo de software</strong>. He realizado
+                        auditorías de seguridad en sistemas Linux y Windows, aplicando metodologías de pruebas de
+                        penetración para identificar vulnerabilidades, evaluar riesgos y proponer medidas de mitigación.
                     </p>
-                    <p class="text-center text-lg-start">
-                        Mi adaptabilidad me permite abrazar rápidamente nuevas tecnologías y enfoques. 
-                        Mantengo una mentalidad abierta para explorar tendencias actuales y valioso aprendizaje continuo.
+                    <p>
+                        Utilizo herramientas como <strong>Kali Linux</strong>, <strong>Nmap</strong>,
+                        <strong>Burp Suite</strong>, <strong>Metasploit</strong> y <strong>Nessus</strong>, entre
+                        otras. Al mismo tiempo, desarrollo soluciones en <strong>Python</strong>, <strong>Java</strong>
+                        y <strong>JavaScript</strong>, tanto en frontend como backend.
                     </p>
-                    <p class="text-center text-lg-start">
-                        Busco un entorno dinámico que fomente mi crecimiento profesional. 
-                        Mi versatilidad en el desarrollo tanto front-end como back-end me capacita para contribuir de forma integral. 
-                        Encaro desafíos con determinación y agrego un valor significativo a cualquier equipo del que forme parte.
+                    <p>
+                        Mi objetivo es crear sistemas más <strong>robustos</strong>, <strong>seguros</strong> e
+                        <strong>intuitivos</strong>, uniendo la visión de desarrollador con la mentalidad de
+                        ciberseguridad.
                     </p>
-                    <a id="asd" class="contacto btn btn-warning d-block m-auto my-lg-5 mx-lg-0"
-                        href="#contacto">Contactame</a>
-
                 </div>
-                <div class="col-lg">
-                    <img class="img__perfil me d-block w-75 m-auto rounded-circle py-5" src="img/imagen_perfil.jpg" alt="imagen de perfil">
+                <div class="col-12 col-lg-5">
+                    <h3 class="fs-6 text-accent text-uppercase mb-3">Datos</h3>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2">
+                            <strong>Nombre:</strong> Elian Dario Villa Villa
+                        </li>
+                        <li class="mb-2">
+                            <strong>Rol:</strong> Ingeniero de Sistemas
+                        </li>
+                        <li class="mb-2">
+                            <strong>Ubicación:</strong> Colombia
+                        </li>
+                        <li class="mb-2">
+                            <strong>Correo:</strong>
+                            <a href="mailto:villaelian6@gmail.com" class="link-light text-decoration-none">
+                                villaelian6@gmail.com
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <strong>Teléfono:</strong>
+                            <a href="tel:+573196576824" class="link-light text-decoration-none">
+                                +57 3196576824
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -104,218 +172,163 @@
 
     <!-- habilidades -->
     <section id="habilidades" class="habilidades container-fluid">
-        <div class="contenedor__principal m-auto text-white px-3">
-            <div class="row">
-                <div class="d-lg-flex justify-content-lg-center align-items-lg-center">
-                    <div class="col-lg">
-                        <h2 class="text-center text-lg-start fw-bold my-5">Habilidades</h2>
+        <div class="contenedor__principal m-auto py-5">
+            <div class="row align-items-center mb-4">
+                <div class="col-12 col-lg-7 mb-3 mb-lg-0">
+                    <h2 class="fw-bold mb-3">Habilidades</h2>
+                    <p>
+                        Combino <strong>ciberseguridad ofensiva</strong>, análisis de vulnerabilidades y
+                        <strong>desarrollo de software</strong> para construir y asegurar aplicaciones.
+                    </p>
+                </div>
+                <div class="col-12 col-lg-5 text-lg-end text-center">
+                    <a href="#experiencia" class="btn btn-warning proyectos text-uppercase fw-semibold">
+                        Ver proyecto principal
+                    </a>
+                </div>
+            </div>
 
-                        <p class="text-center text-lg-start">
-                            Durante mi etapa universitaria, he trabajado con una variedad de tecnologías, 
-                            incluyendo Java y Python para el desarrollo de lógica de programación y resolución de problemas. 
-                            Además, he obtenido experiencia en diseño y maquetado de sitios web mediante HTML y CSS, 
-                            creando interfaces atractivas. Asimismo, he explorado JavaScript para agregar interacciones dinámicas y 
-                            funcionales a mis proyectos. Estoy emocionado por aplicar estas habilidades en nuevos desafíos y proyectos, 
-                            mientras continúo expandiendo mi conocimiento en el campo de la tecnología.
+            <div class="row gy-4">
+                <div class="col-12 col-md-6">
+                    <h3 class="fs-6 text-uppercase text-accent mb-2">Ciberseguridad & Pentesting</h3>
+                    <ul>
+                        <li>Kali Linux</li>
+                        <li>Nmap</li>
+                        <li>Burp Suite</li>
+                        <li>Metasploit</li>
+                        <li>Nessus</li>
+                        <li>Wireshark</li>
+                        <li>Sqlmap</li>
+                        <li>Hydra · John the Ripper</li>
+                        <li>Gobuster · Dirb</li>
+                        <li>Aircrack-ng · Hashcat</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6">
+                    <h3 class="fs-6 text-uppercase text-accent mb-2">Desarrollo de Software</h3>
+                    <ul>
+                        <li>Python · Java · JavaScript</li>
+                        <li>HTML · CSS · Bootstrap</li>
+                        <li>Consumo de APIs</li>
+                        <li>SQL · Bases de datos</li>
+                        <li>Git · GitHub · Control de versiones</li>
+                        <li>Diseño responsivo</li>
+                        <li>Metodologías ágiles</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- proyecto principal -->
+    <section id="experiencia" class="experiencia container-fluid">
+        <div class="contenedor__principal m-auto py-5">
+            <h2 class="fw-bold mb-4 text-white">Proyecto principal</h2>
+
+            <div class="row g-4">
+                <!-- ÚNICO PROYECTO: Generador de contraseñas -->
+                <article class="col-12 col-md-8 col-lg-6">
+                    <div class="article__experiencia position-relative">
+                        <div class="spinner">
+                            <div class="double-bounce1"></div>
+                            <div class="double-bounce2"></div>
+                        </div>
+
+                        <div class="imagen_referencia mb-3">
+                            <!-- Imagen del generador -->
+                            <img src="img/Contraseñas.png"
+                                alt="Interfaz del generador de contraseñas seguras" class="img-fluid custom-image" />
+                        </div>
+
+                        <span class="text-accent text-uppercase small">Ciberseguridad · Herramienta web</span>
+                        <h3 class="fs-5 fw-semibold mb-2 text-white">
+                            Generador de contraseñas seguras
+                        </h3>
+                        <p class="mb-3 text-white small">
+                            Aplicación web que genera contraseñas fuertes y aleatorias combinando mayúsculas,
+                            minúsculas, números y símbolos. Pensada como apoyo para mejorar los hábitos de seguridad
+                            de los usuarios y evitar contraseñas débiles o reutilizadas.
                         </p>
 
-                        <a class="proyectos btn btn-warning d-block m-auto my-lg-5 mx-lg-0"
-                            href="#experiencia">Proyectos</a>
-                    </div>
-                    <div class="col-lg my-5">
-                        <div class="d-flex justify-content-center px-4">
-                            <ul class="me-5">
-                                <li>Java</li>
-                                <li>Python</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                            </ul>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <a href="https://elianvilla.github.io/Password-generator/" target="_blank" rel="noreferrer"
+                                class="btn btn-outline-info btn-sm">
+                                Ver demo
+                            </a>
 
-                            <ul>
-                                <li>JavaScript</li>
-                                <li>MySQL</li>
-                                <li>Git</li>
-                                <li>Visual Studio Code</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                            <a href="https://github.com/ElianVilla/Password-generator" target="_blank"
+                                rel="noreferrer" class="btn btn-outline-light btn-sm">
+                                Ver repositorio
+                            </a>
 
-    <!-- experiencia 1-->
-    <section id="experiencia" class="experiencia container-fluid mb-5">
-        <div class="contenedor__principal m-auto text-white px-3">
+                            <button type="button" class="btn btn-outline-cyan btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#proyectoPasswords">
+                                Ver detalle
+                            </button>
 
-            <div class="row">
-                <div class="col">
-                    <h2 class=" text-center fw-bold my-5">Experiencia</h2>
-                </div>
-            </div>
-
-            <div class="row row-cols-md-2 row-cols-xl-3">
-                <div class="col-md p-2">
-                    <article class="article__experiencia">
-                        <div class="imagen_referencia">
-                            <img class="w-100 rounded-2" src="img/generador_contraseñas.webp" alt="Generador de contraseña">
-                        </div>
-
-                        <div class="spinner">
-                            <div class="double-bounce1"></div>
-                            <div class="double-bounce2"></div>
-                        </div>
-
-                        <span class="m-0 fw-bold">Generador de contraseña</span>
-                        <button type="button" data-bs-toggle="modal" data-bs-target="#generador_contraseñas"
-                            class="btn btn-warning">Ver más</button>
-                    </article>
-                </div>
-
-                <!-- experiencia 2-->
-                <div class="col-md p-2">
-                    <article class="article__experiencia">
-                        <div class="imagen_referencia">
-                            <img class="w-100 rounded-2" src="img/Encriptador de texto.jpg" alt="experiencia auto renting hca">
-                        </div>
-
-                        <div class="spinner">
-                            <div class="double-bounce1"></div>
-                            <div class="double-bounce2"></div>
-                        </div>
-
-                        <span class="m-0 fw-bold">Encriptador de texto</span>
-                        <button type="button" data-bs-toggle="modal" data-bs-target="#encriptador"
-                            class="btn btn-warning">Ver más</button>
-                    </article>
-                </div>
-
-                <!-- EN CASO DE QUERE AGREGAR OTRA EXPERIENCIA -->
-                <!-- <div class="col-md p-2">
-                    <article class="article__experiencia">
-                        <div class="imagen_referencia">
-                            <img class="w-100 rounded-2" src="#" alt="texto alternativo">
-                        </div>
-
-                        <div class="spinner">
-                            <div class="double-bounce1"></div>
-                            <div class="double-bounce2"></div>
-                        </div>
-
-                        <span class="m-0 fw-bold">Lorem ipsum dolor sit amet.</span>
-                        <button type="button" data-bs-toggle="modal" data-bs-target="#idexperiencia"
-                            class="btn btn-warning">Ver más</button>
-                    </article>
-                </div> -->
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- svg waves -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#1f1f1f" fill-opacity="1"
-            d="M0,96L120,122.7C240,149,480,203,720,218.7C960,235,1200,213,1320,202.7L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
-        </path>
-    </svg>
-
-
-    <!-- footer -->
-    <footer class="text-white footer container-fluid" id="contacto">
-        <div class="contenedor__principal m-auto px-3">
-            <div class="row">
-                <div class="d-flex flex-column flex-md-row justify-content-sm-between align-items-sm-center">
-                    <div class="footer__name pb-5">
-                        <span class="d-block fs-4 fw-bold text-center text-md-start">Elian <span
-                                class="text-warning">Villa</span></span>
-                                <span class="text-white d-block text-center text-md-start fs-6">Ingeniero de Sistemas</span>
-                        <span class="text-white d-block text-center text-md-start fs-6">Desarrollador de Software</span>
-                    </div>
-
-                    <div class="pb-5">
-                        <span class="d-block text-center text-md-start">
-                            <i class="fa-solid fa-phone me-2"></i>
-                            +57 3196576824</span>
-                        <span class="d-block text-center text-md-start">
-                            <i class="fa-solid fa-envelope me-2"></i>
-                            villaelian6@gmail.com</span>
-                    </div>
-
-                    <div class="text-center pb-5">
-                        <a class="me-3 text-decoration-none text-white" href="https://github.com/ElianVilla" target="_blank"
-                            rel="noopener noreferrer">
-                            <i class="fa-brands fa-github fs-3"></i>
-                        </a>
-                        <a class="me-3 text-decoration-none text-white" href="https://www.linkedin.com/in/elian-villa/" target="_blank"
-                            rel="noopener noreferrer">
-                            <i class="fa-brands fa-linkedin fs-3"></i>
-                        </a>
-                        <a class="text-decoration-none text-white" href="https://drive.google.com/file/d/1nkNrWKjIWNA0KPoTcTo7BQuU95QGs6S4/view?usp=sharing" target="_blank"
-                            rel="noopener noreferrer" download>
-                            <i class="fa-solid fa-sheet-plastic fs-3"></i>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-    </footer>
-
-    <!-- Generador de contraseñas-->
-    <div class="modal fade" id="generador_contraseñas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-scrollable">
-            <div class="modal-content modal__content--border">
-                <div class="modal-header modal__header--bg text-white">
-                    <h1 class="modal-title fs-5" id="exampleModalLabelPassword">Generador de contraseña</h1>
-                </div>
-                <div class="modal-body modal__body--bg">
-                    <h6 class="d-block fw-bold">Funcionalidad:</h6>
-                    <br>
-
-                    <p>
-                        El <strong>Generador de Contraseñas Aleatorias</strong>  es una herramienta en línea que te brinda la capacidad de generar contraseñas sólidas y exclusivas de manera rápida y sin complicaciones. 
-                        Diseñado con un enfoque en la seguridad, esta herramienta está pensada para reforzar la protección de tus cuentas en línea al producir contraseñas personalizadas según tus propias preferencias.
-                    </p>
-
-                    <div class="d-flex flex-column flex-lg-row justify-content-center gap-3 align-items-center">
-                        <div class="w-100 text-center">
-                            <img src="./img/Contraseñas.png" alt="Contraseña" class="custom-image">
-                            <a class="btn btn-warning mt-3" href="https://elianvilla.github.io/Password-generator/" target="_blank" rel='noopener noreferrer'>
-                                Visitar
+                            <!-- Link a más proyectos (portafolio anterior) -->
+                            <a href="https://elianvilla.github.io/Portafolio-web/" target="_blank" rel="noreferrer"
+                                class="btn btn-outline-secondary btn-sm">
+                                Más proyectos
                             </a>
                         </div>
                     </div>
-                    
-                    
-                    <span class="d-block fw-bold">Tareas realizadas:</span>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL: Generador de contraseñas -->
+    <div class="modal fade" id="proyectoPasswords" tabindex="-1" aria-labelledby="proyectoPasswordsLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content modal__content--border">
+                <div class="modal-header modal__header--bg text-white">
+                    <h1 class="modal-title fs-5" id="proyectoPasswordsLabel">
+                        Generador de contraseñas seguras
+                    </h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body modal__body--bg">
+                    <p>
+                        Esta herramienta genera contraseñas robustas a partir de criterios configurables
+                        (longitud, uso de mayúsculas, minúsculas, números y símbolos). Su objetivo es ayudar a los
+                        usuarios a adoptar <strong>buenas prácticas de ciberseguridad</strong>, evitando contraseñas
+                        débiles o fáciles de adivinar.
+                    </p>
                     <ul>
-                        <li>Personalización de Longitud: Te permite elegir la longitud exacta de tus contraseñas, ajustándolas de   acuerdo a los requisitos de seguridad específicos de cada plataforma.
-                        </li>
-                        <li>
-                            Selección de Caracteres: Ofrece la opción de incluir diferentes tipos de caracteres en tus contraseñas, tales como letras mayúsculas, minúsculas, números y símbolos especiales. Esto aumenta la complejidad y fortaleza de las contraseñas generadas.
-                        </li>
-                        <li>
-                            Vista Previa Segura: Antes de decidir, te permite ver una vista previa de la contraseña generada para asegurarte de que cumple con tus requisitos y preferencias.
-                        </li>
-                        <li>
-                            Ahorro de Tiempo: Elimina la necesidad de pensar en contraseñas complejas, permitiéndote obtener contraseñas seguras en cuestión de segundos.
-                        </li>
+                        <li><strong>Rol:</strong> Desarrollo completo (diseño, lógica y front).</li>
+                        <li><strong>Tecnologías:</strong> HTML, CSS, JavaScript.</li>
+                        <li><strong>Características:</strong> interfaz clara, generación aleatoria, opciones
+                            configurables, diseño responsivo.</li>
                     </ul>
+                    <p class="mb-2">
+                        Forma parte de mis proyectos orientados a reforzar la seguridad del usuario final y acompañar
+                        procesos de formación en ciberseguridad.
+                    </p>
 
-                    <br>
-                    <span class="d-block fw-bold">Tecnologías utilizadas:</span>
-                    <ul>
-                        <li>Html</li>
-                        <li>Css</li>
-                        <li>JavaScript</li>
-                    </ul>
-
-                    <br>
-
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <a href="https://elianvilla.github.io/Password-generator/" target="_blank" rel="noreferrer"
+                            class="btn btn-info btn-sm">
+                            Ver demo en producción
+                        </a>
+                        <a href="https://github.com/ElianVilla/Password-generator" target="_blank" rel="noreferrer"
+                            class="btn btn-outline-light btn-sm">
+                            Ver código en GitHub
+                        </a>
+                        <a href="https://elianvilla.github.io/Portafolio-web/" target="_blank" rel="noreferrer"
+                            class="btn btn-outline-secondary btn-sm">
+                            Ver otros proyectos
+                        </a>
+                        <a href="https://drive.google.com/file/d/1MDTQ2KBqd9IDTUWk9ojGqbHCkymKdX4R/view?usp=sharing"
+                            target="_blank" rel="noreferrer" class="btn btn-outline-light btn-sm">
+                            Ver CV completo
+                        </a>
+                    </div>
                 </div>
                 <div class="modal-footer modal__footer--bg">
-                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">
+                    <button type="button" class="btn btn-info" data-bs-dismiss="modal">
                         Cerrar
                     </button>
                 </div>
@@ -323,197 +336,63 @@
         </div>
     </div>
 
-
-    <!-- Encriptador de texto -->
-    <div class="modal fade" id="encriptador" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-scrollable">
-            <div class="modal-content modal__content--border">
-                <div class="modal-header modal__header--bg text-white">
-                    <h1 class="modal-title fs-5" id="exampleModalLabelText">Encriptador de texto</h1>
-                </div>
-                <div class="modal-body modal__body--bg">
-                    <h6 class="d-block fw-bold">Funcionalidad:</h6>
-                    <br>
-
-                    <p>
-                        El <strong>Encriptador de texto</strong> es una herramienta esencial para salvaguardar la confidencialidad de tus mensajes y datos sensibles. Con una interfaz intuitiva y fácil de usar, este programa te permite cifrar tus mensajes de manera eficiente, asegurando que solo las personas autorizadas puedan acceder a su contenido.
-                    </p>
-
-                    <div class="d-flex flex-column flex-lg-row justify-content-center gap-3 align-items-center">
-                        <div class="w-100 text-center">
-                            <img src="./img/Encriptador.png" alt="encriptador" class="custom-image">
-                            <a class="btn btn-warning mt-3" href="https://elianvilla.github.io/Encriptador-de-Texto/" target="_blank" rel='noopener noreferrer'>
-                                Visitar
-                            </a>
-                        </div>
+    <!-- contacto / footer -->
+    <section id="contacto" class="container-fluid py-5">
+        <div class="contenedor__principal m-auto">
+            <div class="row gy-4">
+                <div class="col-12 col-md-6">
+                    <div class="footer__name mb-3">
+                        <span class="fs-4 fw-bold text-white">Elian <span class="text-accent">Villa</span></span>
                     </div>
-                    
-                    
-                    <span class="d-block fw-bold">Tareas realizadas:</span>
-                    <ul>
-                        <li><strong>Interfaz Simple:</strong> Nuestro encriptador presenta una interfaz minimalista y amigable, lo que facilita a los usuarios de todos los niveles de experiencia el proceso de cifrado.
-                        </li>
-                        <li>
-                            <strong>Proceso Rápido:</strong> Codifica y decodifica tus mensajes de manera rápida y eficaz, ahorrándote tiempo mientras mantienes la seguridad de tus comunicaciones.
-                        </li>
-                        <li>
-                            <strong>Código Abierto:</strong> El encriptador se distribuye bajo licencia de código abierto, lo que significa que puedes estudiar, modificar y mejorar el código según tus requerimientos.
-                        </li>
-
-                    </ul>
-
-                    <br>
-                    <span class="d-block fw-bold">Tecnologías utilizadas:</span>
-                    <ul>
-                        <li>Html</li>
-                        <li>Css</li>
-                        <li>JavaScript</li>
-                    </ul>
-
-                    <br>
-
-                </div>
-                <div class="modal-footer modal__footer--bg">
-                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">
-                        Cerrar
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Otra experiencia-->
-    <!--<div class="modal fade" id="autorenting" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-scrollable">
-            <div class="modal-content modal__content--border">
-                <div class="modal-header modal__header--bg text-white">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Lorem ipsum dolor sit amet.</h1>
-                </div>
-                <div class="modal-body modal__body--bg">
-                    <h6 class="d-block fw-bold">Funcionalidad:</h6>
-                    <br>
-
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nostrum tempore quas
-                        voluptas illo nulla laborum modi, corrupti dolorem. Nihil deserunt alias nisi officia amet
-                        tenetur vel, odio obcaecati rerum!
+                    <p class="mb-2 text-white">
+                        ¿Te interesa una auditoría de seguridad, un proyecto de desarrollo o una colaboración
+                        tecnológica? Estoy disponible para nuevos retos.
                     </p>
-
-                    <div class="custom__carousel rounded-4">
-                        <div id="carouselExampleFade" class="carousel slide carousel-fade w-100 h-100">
-                            <div class="carousel-inner h-100">
-                                <div class="carousel-item active h-100">
-                                    <img src="./img/ar1.jpeg" class="d-block h-100 m-auto" alt="interfaz de log in">
-                                </div>
-                                <div class="carousel-item h-100">
-                                    <img src="./img/ar2.jpeg" class="d-block h-100 m-auto " alt="interfaz de registro">
-                                </div>
-                                <div class="carousel-item h-100">
-                                    <img src="./img/ar3.jpeg" class="d-block h-100 m-auto" alt="interfaz de inicio">
-                                </div>
-                                <div class="carousel-item h-100">
-                                    <img src="./img/ar4.jpeg" class="d-block h-100 m-auto" alt="barra de anvegación">
-                                </div>
-                                <div class="carousel-item h-100">
-                                    <img src="./img/ar5.jpeg" class="d-block h-100 m-auto"
-                                        alt="interfaz de selección dde vehiculo">
-                                </div>
-                                <div class="carousel-item h-100">
-                                    <img src="./img/ar6.jpeg" class="d-block h-100 m-auto"
-                                        alt="interfaz de alquiler de vehiculo">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <h3 class="fs-6 text-uppercase text-accent mb-3">Contacto</h3>
+                    <p class="mb-2">
+                        <i class="fa-solid fa-phone me-2"></i>
+                        <span>+57 3196576824</span>
+                    </p>
+                    <p class="mb-3">
+                        <i class="fa-solid fa-envelope me-2"></i>
+                        <span>villaelian6@gmail.com</span>
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="https://github.com/ElianVilla" class="text-decoration-none text-light" target="_blank"
+                            rel="noreferrer">
+                            <i class="fa-brands fa-github fs-4"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/elian-villa"
+                            class="text-decoration-none text-light" target="_blank" rel="noreferrer">
+                            <i class="fa-brands fa-linkedin fs-4"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@glawpy" class="text-decoration-none text-light" target="_blank"
+                            rel="noreferrer">
+                            <i class="fa-brands fa-youtube fs-4"></i>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1MDTQ2KBqd9IDTUWk9ojGqbHCkymKdX4R/view?usp=sharing"
+                            class="text-decoration-none text-light" target="_blank" rel="noreferrer">
+                            <i class="fa-solid fa-file-arrow-down fs-4"></i>
+                        </a>
                     </div>
-
-                    <a class="btn btn-warning my-3" href="#" target="_blank" rel='noopener noreferrer'>
-                        Visitar repositorio
-                    </a>
-
-                    <br>
-                    <span class="d-block fw-bold">Tecnologías utilizadas:</span>
-                    <ul>
-                        <li>Tecnología</li>
-                        <li>Tecnología</li>
-                        <li>Tecnología</li>
-                        <li>Tecnología</li>
-                        <li>Tecnología</li>
-                        <li>Tecnología</li>
-                    </ul>
-
-                    <br>
-                    <span class="d-block fw-bold">Tareas realizadas:</span>
-                    <br>
-                    <ul>
-                        <li>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        </li>
-                        <li>
-                            Lorem ipsum dolor, sit amet consectetur.
-                        </li>
-                        <li>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        </li>
-                        <li>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        </li>
-                        <li>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        </li>
-                        <li>
-                            Lorem ipsum dolor, sit amet.
-                        </li>
-                        <li>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing.
-                        </li>
-                    </ul>
-                </div>
-                <div class="modal-footer modal__footer--bg">
-                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">
-                        Cerrar
-                    </button>
                 </div>
             </div>
         </div>
-    </div> -->
+    </section>
 
+    <!-- Botón volver arriba -->
+    <button class="back-to-top" aria-label="Volver al inicio">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
-        <!-- EN CASO DE QUERE AGREGAR OTRA EXPERIENCIA -->
-    <!-- <div class="modal fade" id="idexperiencia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-scrollable">
-            <div class="modal-content modal__content--border">
-                <div class="modal-header modal__header--bg text-white">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Lorem ipsum dolor sit amet.</h1>
-                </div>
-                <div class="modal-body modal__body--bg">
-
-                    <span>CONTENIDO AQUÍ</span>
-
-                </div>
-                <div class="modal-footer modal__footer--bg">
-                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">
-                        Cerrar
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
 
-    <!-- mis scripts -->
+    <!-- Script propio -->
     <script defer src="js/index.js"></script>
 </body>
 

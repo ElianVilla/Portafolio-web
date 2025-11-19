@@ -1,81 +1,139 @@
-// variables desde html
-const wellcome = document.querySelector(".wellcome");
-const iconNav = document.querySelector(".nav_enlace_icon");
-const nav = document.querySelector(".nav__enlaces");
-const xp = document.querySelectorAll(".article__experiencia");
-const imgPerfil = document.querySelector(".img__perfil");
-const spinner = document.querySelectorAll(".spinner");
-const spinnerDB1 = document.querySelectorAll(".double-bounce1");
-const spinnerDB2 = document.querySelectorAll(".double-bounce2");
-
-// variables de js
-let sppinerStatus = true;
+// Animaciones y UX para el portafolio
 
 document.addEventListener("DOMContentLoaded", () => {
-    wellcome.classList.add("wellcome--opacity");
+    const body = document.body;
+
+    // Activar animación de entrada del body
+    if (body.classList.contains("wellcome")) {
+        body.classList.add("wellcome--opacity");
+    }
+
+    setupMobileNav();
+    setupScrollReveal();
+    setupNavHighlight();
+    setupBackToTop();
 });
 
-iconNav.addEventListener("click", () => {
-    nav.classList.toggle("nav__enlaces__visible");
-});
+/**
+ * Menú hamburguesa en móvil
+ */
+function setupMobileNav() {
+    const iconNav = document.querySelector(".nav_enlace_icon");
+    const nav = document.querySelector(".nav__enlaces");
 
-opacityTransitionElement(imgPerfil);
-opacityElement(imgPerfil);
+    if (!iconNav || !nav) return;
 
-xp.forEach((element) => {
-    opacityTransitionElement(element);
-    opacityElement(element);
-});
+    iconNav.addEventListener("click", () => {
+        nav.classList.toggle("nav__enlaces--open");
+        iconNav.classList.toggle("is-open");
+    });
 
-spinner.forEach((element) => {
-    opacityTransitionElement(element);
-});
+    // Cerrar menú al hacer click en un enlace
+    nav.querySelectorAll(".nav__enlace").forEach((link) => {
+        link.addEventListener("click", () => {
+            nav.classList.remove("nav__enlaces--open");
+            iconNav.classList.remove("is-open");
+        });
+    });
+}
 
-function opacityElement(element) {
-    const observer = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
-            element.style.opacity = "1";
+/**
+ * Animación de aparición al hacer scroll
+ */
+function setupScrollReveal() {
+    const elements = document.querySelectorAll(
+        ".section, .acercade, .habilidades, .experiencia, #contacto, .article__experiencia"
+    );
 
-            if (element.classList.contains("article__experiencia")) {
-                hiddenShowSpinner();
-                sppinerStatus = false;
-                return;
+    if (!elements.length) return;
+
+    // Si el navegador no soporta IntersectionObserver, mostramos todo sin animación
+    if (!("IntersectionObserver" in window)) {
+        elements.forEach((el) => el.classList.add("reveal--visible"));
+        return;
+    }
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("reveal--visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.25,
+        }
+    );
+
+    elements.forEach((el) => {
+        el.classList.add("reveal");
+        observer.observe(el);
+    });
+}
+
+/**
+ * Resalta el enlace de navegación de la sección visible
+ */
+function setupNavHighlight() {
+    const links = document.querySelectorAll(".nav__enlace[href^='#']");
+    if (!links.length) return;
+
+    const sections = Array.from(links)
+        .map((link) => {
+            const id = link.getAttribute("href");
+            const section = document.querySelector(id);
+            return section ? { link, section } : null;
+        })
+        .filter(Boolean);
+
+    const clearActive = () => {
+        links.forEach((l) => l.classList.remove("nav__enlace--active"));
+    };
+
+    const onScroll = () => {
+        const scrollPos = window.scrollY + 110; // un poco debajo de la navbar
+        let currentLink = null;
+
+        sections.forEach(({ link, section }) => {
+            const top = section.offsetTop;
+            const bottom = top + section.offsetHeight;
+
+            if (scrollPos >= top && scrollPos < bottom) {
+                currentLink = link;
             }
+        });
+
+        clearActive();
+        if (currentLink) {
+            currentLink.classList.add("nav__enlace--active");
+        }
+    };
+
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+}
+
+/**
+ * Botón "volver arriba"
+ */
+function setupBackToTop() {
+    const btn = document.querySelector(".back-to-top");
+    if (!btn) return;
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 500) {
+            btn.classList.add("back-to-top--visible");
         } else {
-            element.style.opacity = "0";
+            btn.classList.remove("back-to-top--visible");
         }
     });
 
-    observer.observe(element);
+    btn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    });
 }
-
-// FUNCIONES
-function opacityTransitionElement(element) {
-    element.classList.add("opacityElement");
-}
-
-function hiddenShowSpinner() {
-    if (sppinerStatus) {
-        spinnerStyle(spinner, "opacity", "1");
-        spinnerStyle(spinner, "display", "block");
-
-        spinnerStyle(spinnerDB1, "animationPlayState", "running");
-        spinnerStyle(spinnerDB2, "animationPlayState", "running");
-
-        setTimeout(() => {
-            spinnerStyle(spinner, "opacity", "0");
-
-            spinnerStyle(spinnerDB1, "animationPlayState", "paused");
-            spinnerStyle(spinnerDB2, "animationPlayState", "paused");
-
-            setTimeout(() => {
-                spinner.forEach((e) => e.remove());
-            }, 2000);
-        }, 2000);
-    }
-}
-
-function spinnerStyle(element, styleCustom, valueCustom) {
-    element.forEach((e) => (e.style[styleCustom] = `${valueCustom}`));
-}
-

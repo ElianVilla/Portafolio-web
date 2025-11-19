@@ -78,3 +78,4 @@ function hiddenShowSpinner() {
 function spinnerStyle(element, styleCustom, valueCustom) {
     element.forEach((e) => (e.style[styleCustom] = `${valueCustom}`));
 }
+

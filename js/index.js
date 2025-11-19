@@ -1,12 +1,8 @@
-// variables desde html
-const wellcome = document.querySelector(".wellcome");
-const iconNav = document.querySelector(".nav_enlace_icon");
-const nav = document.querySelector(".nav__enlaces");
-const xp = document.querySelectorAll(".article__experiencia");
-const imgPerfil = document.querySelector(".img__perfil");
-const spinner = document.querySelectorAll(".spinner");
-const spinnerDB1 = document.querySelectorAll(".double-bounce1");
-const spinnerDB2 = document.querySelectorAll(".double-bounce2");
+const navbar = document.querySelector('.navbar');
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('section');
+const btnToTop = document.querySelector('.btn-to-top');
+const revealElements = document.querySelectorAll('.reveal');
 
 // variables de js
 let sppinerStatus = true;
@@ -78,4 +74,3 @@ function hiddenShowSpinner() {
 function spinnerStyle(element, styleCustom, valueCustom) {
     element.forEach((e) => (e.style[styleCustom] = `${valueCustom}`));
 }
-

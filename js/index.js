@@ -1,80 +1,73 @@
-// variables desde html
-const wellcome = document.querySelector(".wellcome");
-const iconNav = document.querySelector(".nav_enlace_icon");
-const nav = document.querySelector(".nav__enlaces");
-const xp = document.querySelectorAll(".article__experiencia");
-const imgPerfil = document.querySelector(".img__perfil");
-const spinner = document.querySelectorAll(".spinner");
-const spinnerDB1 = document.querySelectorAll(".double-bounce1");
-const spinnerDB2 = document.querySelectorAll(".double-bounce2");
+const navbar = document.querySelector('.navbar');
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('section');
+const btnToTop = document.querySelector('.btn-to-top');
+const revealElements = document.querySelectorAll('.reveal');
 
-// variables de js
-let sppinerStatus = true;
+// Navbar scroll state
+const handleNavbarAppearance = () => {
+    if (window.scrollY > 10) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+};
 
-document.addEventListener("DOMContentLoaded", () => {
-    wellcome.classList.add("wellcome--opacity");
-});
+// Intersection Observer for reveal animations and active nav links
+const observerOptions = {
+    threshold: 0.15,
+};
 
-iconNav.addEventListener("click", () => {
-    nav.classList.toggle("nav__enlaces__visible");
-});
-
-opacityTransitionElement(imgPerfil);
-opacityElement(imgPerfil);
-
-xp.forEach((element) => {
-    opacityTransitionElement(element);
-    opacityElement(element);
-});
-
-spinner.forEach((element) => {
-    opacityTransitionElement(element);
-});
-
-function opacityElement(element) {
-    const observer = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
-            element.style.opacity = "1";
-
-            if (element.classList.contains("article__experiencia")) {
-                hiddenShowSpinner();
-                sppinerStatus = false;
-                return;
-            }
-        } else {
-            element.style.opacity = "0";
+const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            navLinks.forEach((link) => link.classList.remove('active'));
+            const activeLink = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+            activeLink?.classList.add('active');
         }
     });
+}, observerOptions);
 
-    observer.observe(element);
-}
+sections.forEach((section) => sectionObserver.observe(section));
 
-// FUNCIONES
-function opacityTransitionElement(element) {
-    element.classList.add("opacityElement");
-}
+const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
 
-function hiddenShowSpinner() {
-    if (sppinerStatus) {
-        spinnerStyle(spinner, "opacity", "1");
-        spinnerStyle(spinner, "display", "block");
+revealElements.forEach((el) => revealObserver.observe(el));
 
-        spinnerStyle(spinnerDB1, "animationPlayState", "running");
-        spinnerStyle(spinnerDB2, "animationPlayState", "running");
-
-        setTimeout(() => {
-            spinnerStyle(spinner, "opacity", "0");
-
-            spinnerStyle(spinnerDB1, "animationPlayState", "paused");
-            spinnerStyle(spinnerDB2, "animationPlayState", "paused");
-
-            setTimeout(() => {
-                spinner.forEach((e) => e.remove());
-            }, 2000);
-        }, 2000);
+// Back to top
+const toggleBackToTop = () => {
+    if (window.scrollY > 400) {
+        btnToTop.classList.add('show');
+    } else {
+        btnToTop.classList.remove('show');
     }
-}
+};
 
-function spinnerStyle(element, styleCustom, valueCustom) {
-    element.forEach((e) => (e.style[styleCustom] = `${valueCustom}`));
-}
+btnToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Collapse navbar on link click (mobile)
+navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        const collapse = document.getElementById('navbarNav');
+        if (collapse?.classList.contains('show')) {
+            const bsCollapse = bootstrap.Collapse.getInstance(collapse) || new bootstrap.Collapse(collapse);
+            bsCollapse.hide();
+        }
+    });
+});
+
+handleNavbarAppearance();
+toggleBackToTop();
+window.addEventListener('scroll', () => {
+    handleNavbarAppearance();
+    toggleBackToTop();
+});

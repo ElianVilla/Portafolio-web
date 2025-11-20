@@ -597,11 +597,3 @@ nav.w-100.position-fixed {
         max-width: 220px;
     }
 }
-
-/* Ajuste columnas en escritorio */
-@media (min-width: 992px) {
-    .section__izquierda,
-    .section__derecha {
-        flex: 1 1 0;
-    }
-}

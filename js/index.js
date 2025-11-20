@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-const navbar = document.querySelector('.navbar');
-const navLinks = document.querySelectorAll('.nav-link');
-const sections = document.querySelectorAll('section');
-const btnToTop = document.querySelector('.btn-to-top');
-const revealElements = document.querySelectorAll('.reveal');
-
-// variables de js
-let sppinerStatus = true;
-=======
 // Animaciones y UX para el portafolio
->>>>>>> actualizar
 
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
